@@ -9,5 +9,6 @@
   "version": "0.1.0",
   "generate_interceptor": "smoothChatPromptInterceptor",
   "minimum_client_version": "1.14.0",
-  "auto_update": false
+  "homePage": "https://github.com/lashaunlourens-spec/SillyTavern-SmoothChat",
+  "auto_update": true
 }
