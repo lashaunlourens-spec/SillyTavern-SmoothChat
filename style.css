@@ -1,0 +1,85 @@
+.smooth-chat-settings {
+    color: inherit;
+}
+
+.smooth-chat-settings .inline-drawer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.smooth-chat-description,
+.smooth-chat-footnote {
+    margin: 0;
+    max-width: 70ch;
+    line-height: 1.5;
+}
+
+.smooth-chat-footnote {
+    opacity: 0.8;
+    font-size: 0.9em;
+}
+
+.smooth-chat-fields {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.65rem 0.8rem;
+}
+
+.smooth-chat-fields label,
+.smooth-chat-editor {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.smooth-chat-fields .text_pole {
+    width: 100%;
+    min-width: 0;
+}
+
+.smooth-chat-status,
+.smooth-chat-notice {
+    padding: 0.65rem 0.75rem;
+    border: 1px solid var(--SmartThemeBorderColor);
+    border-radius: 8px;
+    line-height: 1.45;
+}
+
+.smooth-chat-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.smooth-chat-actions .menu_button {
+    flex: 1 1 9rem;
+    min-height: 2.25rem;
+}
+
+.smooth-chat-editor textarea {
+    width: 100%;
+    resize: vertical;
+    line-height: 1.45;
+}
+
+@media (max-width: 520px) {
+    .smooth-chat-fields {
+        grid-template-columns: 1fr;
+    }
+
+    .smooth-chat-actions .menu_button {
+        flex-basis: 100%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .smooth-chat-settings *,
+    .smooth-chat-settings *::before,
+    .smooth-chat-settings *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}

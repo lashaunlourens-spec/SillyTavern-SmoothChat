@@ -1,0 +1,70 @@
+<div class="smooth-chat-settings">
+    <div class="inline-drawer">
+        <div class="inline-drawer-toggle inline-drawer-header">
+            <b>流畅聊天</b>
+            <div class="inline-drawer-icon fa-solid fa-circle-chevron-down down"></div>
+        </div>
+        <div class="inline-drawer-content">
+            <p class="smooth-chat-description">
+                每 15 轮增量总结旧对话，并减少模型请求携带的历史内容。不会删除聊天记录，也不会修改聊天主题。
+            </p>
+
+            <label class="checkbox_label" for="smooth_chat_enabled">
+                <input id="smooth_chat_enabled" type="checkbox">
+                <span>启用插件</span>
+            </label>
+
+            <label class="checkbox_label" for="smooth_chat_auto_summarize">
+                <input id="smooth_chat_auto_summarize" type="checkbox">
+                <span>自动总结</span>
+            </label>
+
+            <label class="checkbox_label" for="smooth_chat_limit_rendered">
+                <input id="smooth_chat_limit_rendered" type="checkbox">
+                <span>限制首次加载的历史消息数量</span>
+            </label>
+
+            <div class="smooth-chat-fields">
+                <label for="smooth_chat_interval">
+                    <span>每几轮总结</span>
+                    <input id="smooth_chat_interval" class="text_pole" type="number" min="1" max="100" step="1">
+                </label>
+                <label for="smooth_chat_recent_rounds">
+                    <span>最近原文保留轮数</span>
+                    <input id="smooth_chat_recent_rounds" class="text_pole" type="number" min="0" max="50" step="1">
+                </label>
+                <label for="smooth_chat_visible_limit">
+                    <span>首次加载消息数</span>
+                    <input id="smooth_chat_visible_limit" class="text_pole" type="number" min="20" max="500" step="10">
+                </label>
+                <label for="smooth_chat_target_words">
+                    <span>摘要目标字数</span>
+                    <input id="smooth_chat_target_words" class="text_pole" type="number" min="100" max="3000" step="100">
+                </label>
+            </div>
+
+            <div id="smooth_chat_status" class="smooth-chat-status" role="status" aria-live="polite"></div>
+            <div id="smooth_chat_conflict" class="smooth-chat-notice" hidden>
+                检测到酒馆内置摘要内容。建议只启用一个自动摘要功能，避免重复调用和重复注入。
+            </div>
+
+            <div class="smooth-chat-actions">
+                <button id="smooth_chat_summarize_now" class="menu_button" type="button">立即总结</button>
+                <button id="smooth_chat_toggle_editor" class="menu_button" type="button">查看/编辑摘要</button>
+                <button id="smooth_chat_rebuild" class="menu_button" type="button">重建摘要</button>
+                <button id="smooth_chat_pause" class="menu_button" type="button">暂停当前聊天</button>
+                <button id="smooth_chat_restore_limit" class="menu_button" type="button">恢复原消息加载数</button>
+            </div>
+
+            <div id="smooth_chat_editor" class="smooth-chat-editor" hidden>
+                <label for="smooth_chat_summary_text">当前聊天摘要</label>
+                <textarea id="smooth_chat_summary_text" class="text_pole" rows="10"></textarea>
+                <button id="smooth_chat_save_summary" class="menu_button" type="button">保存摘要</button>
+            </div>
+
+            <p class="smooth-chat-footnote">
+                “首次加载消息数”只使用酒馆原生的“显示更多消息”机制，不会改变气泡、字体、颜色、背景或布局。
+            </p>
+        </div>
+    </div>
+</div>

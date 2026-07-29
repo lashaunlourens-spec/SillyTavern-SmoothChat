@@ -1,0 +1,12 @@
+{
+  "name": "sillytavern-smooth-chat",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Incremental summaries and safe context trimming for long SillyTavern chats.",
+  "scripts": {
+    "check": "node scripts/check.mjs",
+    "test": "node --test"
+  },
+  "license": "MIT"
+}
